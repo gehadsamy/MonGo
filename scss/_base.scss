@@ -1,0 +1,330 @@
+@import 'mixin';
+
+.Counting {
+    background-color: $background_color;
+}
+
+.iconify {
+    font-size: 30px;
+    margin-right: 20px;
+    color: $background_color;
+}
+
+body {
+    font-size: 16px;
+}
+
+.a {
+    background: $grdiant_background;
+}
+
+.Subheader {
+    font-family: $KaushanScriptFont;
+}
+
+.sections__title {
+    @include typoStyle($robotoFont);
+    width: 80%;
+}
+
+.sections__headers {
+    @include headers($MontserratFont, 700, 25px, center, 30px, 25px);
+
+    &::after {
+        @include headersAfter;
+    }
+}
+
+
+
+
+// header
+
+.splide__pagination {
+    bottom: 0.5em;
+    padding-left: 0;
+    position: relative;
+
+    li {
+        width: 20%;
+        margin: 10px;
+    }
+}
+
+.sub__headers {
+    @include headers($MontserratFont, 500, 15px, left, 5px, 5px);
+}
+
+.section_padding {
+    padding: $section_padding;
+}
+
+// .aboutus
+.aboutus__element {
+    .iconify {
+        margin-right: 0;
+    }
+
+    .content {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $navbar_links;
+        /* text-transform: uppercase; */
+        transition: .5s ease;
+        @include background_color()
+    }
+}
+
+
+.Unique__design {
+    .tablet {
+        position: relative;
+        left: 10%;
+    }
+
+    .mobile {
+        left: 25rem !important;
+    }
+}
+
+
+
+
+.Counting {
+    font-family: $MontserratFont;
+
+    .number {
+        font-size: 3.8rem;
+    }
+}
+
+.branding {
+    background: $backgroundbrand;
+}
+
+.mdi {
+    color: $background_color;
+
+    font-size: 1.9rem;
+}
+
+.amazing__item {
+    .col-2 {
+        margin: -.8rem auto;
+    }
+}
+
+.accordion-button:not(.collapsed) {
+    color: $header_color !important;
+    background-color: white !important;
+}
+
+.overview {
+    background: $backgroundbrand;
+}
+
+.overview__item {
+    margin: 0 80px;
+
+}
+
+.mid .symbol {
+    font-size: 3rem !important;
+}
+
+.Unique__design {
+
+    @include background-image($background_img);
+
+    .design-devices {
+        position: relative;
+
+        .mobile {
+            position: absolute;
+            bottom: -4rem;
+            left: 50%;
+            margin-left: 5rem;
+        }
+    }
+
+}
+
+.ourteams__element .overlay,
+.aboutus__element .overlay {
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    @include inimation()
+}
+
+.Happy__Clients {
+    @include background-image("../assets/unique-design/bg-unique-design.jpg");
+
+    .jop_title {
+        position: relative;
+
+        &::after {
+            @include headersAfter;
+        }
+    }
+
+    .jop_title::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 150%;
+        width: 50px;
+        height: 2px;
+        background: #f38181;
+        transform: translateY(-50%);
+    }
+}
+
+.circle {
+    border-radius: 50%;
+    padding: 4px;
+    background-color: $navbar_links;
+    border: 1px solid #ddd;
+}
+
+.date {
+    position: relative;
+    background: $background_color;
+    left: -10px;
+    bottom: 67px;
+    width: 15%;
+    height: 30%;
+    padding: 12px 11px;
+
+    text-align: center;
+}
+
+.item:visited .overlay {
+    left: -10px;
+    top: -10px;
+}
+
+.aboutus {
+
+    a:hover {
+        bottom: 10px;
+        position: relative;
+        cursor: pointer;
+        width: 200px;
+        height: 200px;
+        right: 10px;
+    }
+
+    .overlay {
+        background: $background_color;
+        position: absolute;
+
+    }
+
+    .overlay::before {
+        z-index: 999999999;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        // opacity: 0;
+        transition: .5s ease;
+        background: linear-gradient(to bottom, rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9));
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+
+}
+
+.splide__list {
+    h1 {
+        @include headers($MontserratFont, 700, 6.5rem, center, 30px, 25px);
+        width: 60%;
+    }
+
+    p {
+        font-family: $KaushanScriptFont;
+        font-size: 3.5rem;
+    }
+}
+
+.map {
+    @include background-image("../assets/map/bg-map.jpg");
+
+    i,
+    h2 {
+        color: $afterborder_color;
+
+    }
+
+}
+
+.colInfo {
+    .footerLogo {
+        color: $text_color;
+        font-family: $MontserratFont;
+    }
+}
+
+.navbar-nav>li>a:hover,
+.navbar-nav>.active>a,
+.navbar-nav>.active>a:hover {
+    color: $links_lins;
+    border-color: $links_lins;
+    background: none;
+    
+}
+
+.navbar-nav>li>a,
+.nav-link:focus {
+    color: $navbar_links;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-bottom: 3px solid transparent;
+    padding: 15px 5px 5px;
+    margin: 0 12px;
+}
+
+.navbar-brand {
+    color: $navbar_links;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+@media (min-width: 375px) and (max-width: 576px) {
+    .mobile {
+        display: none;
+    }
+}
+
+.ourteams__element .overlay:before {
+    @include overlay();
+}
+
+
+.footer_body {
+    .sections__title {
+        width: 100%;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .iconify {
+        margin-right: 0;
+        font-size: 20px;
+    }
+}
